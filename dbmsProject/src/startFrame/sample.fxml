@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.GridPane?>
+
+<AnchorPane fx:id="root" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="756.0" prefWidth="1147.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="startFrame.Controller">
+   <children>
+      <Pane layoutY="-1.0" prefHeight="756.0" prefWidth="212.0">
+         <children>
+            <Button mnemonicParsing="false" onAction="#studentDetails" prefHeight="72.0" prefWidth="212.0" text="Student Details" />
+            <Button layoutY="72.0" mnemonicParsing="false" onAction="#addStudent" prefHeight="72.0" prefWidth="212.0" text="Add/Remove student" />
+            <Button layoutY="144.0" mnemonicParsing="false" onAction="#showMessDetails" prefHeight="72.0" prefWidth="212.0" text="Mess details" />
+            <Button layoutY="216.0" mnemonicParsing="false" onAction="#addMess" prefHeight="72.0" prefWidth="212.0" text="Add/Remove Mess" />
+            <Button layoutY="288.0" mnemonicParsing="false" onAction="#menuDetails" prefHeight="72.0" prefWidth="212.0" text="Menu" />
+         </children>
+      </Pane>
+      <Pane fx:id="right" AnchorPane.bottomAnchor="0" AnchorPane.leftAnchor="212.0" AnchorPane.rightAnchor="0" AnchorPane.topAnchor="0">
+         <children>
+            <Pane fx:id="menu" layoutX="-2.0" prefHeight="756.0" prefWidth="937.0" style="visibility: false;">
+               <children>
+                  <ListView fx:id="menuList" prefHeight="756.0" prefWidth="937.0" />
+               </children>
+            </Pane>
+            <Pane fx:id="addMess" layoutX="262.0" layoutY="88.0" prefHeight="556.0" prefWidth="407.0" style="visibility: false;">
+               <children>
+                  <Text layoutX="118.0" layoutY="30.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Enter the following details" />
+                  <Pane layoutX="101.0" layoutY="51.0" prefHeight="31.0" prefWidth="251.0">
+                     <children>
+                        <TextField fx:id="messName" layoutX="80.0" layoutY="2.0" prefHeight="25.0" prefWidth="170.0" />
+                        <Label layoutX="8.0" layoutY="8.0" text="Name" />
+                     </children>
+                  </Pane>
+                  <Pane layoutX="55.0" layoutY="85.0" prefHeight="31.0" prefWidth="297.0">
+                     <children>
+                        <TextField fx:id="contractor" layoutX="126.0" layoutY="2.0" />
+                        <Label layoutX="40.0" layoutY="8.0" text="Contractor" />
+                     </children>
+                  </Pane>
+                  <Pane layoutX="55.0" layoutY="117.0" prefHeight="31.0" prefWidth="297.0">
+                     <children>
+                        <TextField fx:id="messLocation" layoutX="126.0" layoutY="2.0" />
+                        <Label layoutX="56.0" layoutY="8.0" text="Location" />
+                     </children>
+                  </Pane>
+                  <Pane layoutX="55.0" layoutY="147.0" prefHeight="31.0" prefWidth="297.0">
+                     <children>
+                        <TextField fx:id="breakfast" layoutX="126.0" layoutY="2.0" />
+                        <Label layoutX="22.0" layoutY="10.0" text="Breakfast time" />
+                     </children>
+                  </Pane>
+                  <Pane layoutX="55.0" layoutY="180.0" prefHeight="31.0" prefWidth="297.0">
+                     <children>
+                        <TextField fx:id="lunch" layoutX="126.0" layoutY="2.0" />
+                        <Label layoutX="44.0" layoutY="10.0" text="Lunch time" />
+                     </children>
+                  </Pane>
+                  <Pane layoutX="55.0" layoutY="213.0" prefHeight="31.0" prefWidth="297.0">
+                     <children>
+                        <TextField fx:id="dinner" layoutX="126.0" layoutY="2.0" />
+                        <Label layoutX="28.0" layoutY="10.0" text="Dinner time" />
+                     </children>
+                  </Pane>
+                  <Pane layoutX="55.0" layoutY="244.0" prefHeight="31.0" prefWidth="297.0">
+                     <children>
+                        <TextField fx:id="messEmail" layoutX="126.0" layoutY="2.0" />
+                        <Label layoutX="56.0" layoutY="8.0" text="Email" />
+                     </children>
+                  </Pane>
+                  <Pane layoutX="55.0" layoutY="275.0" prefHeight="31.0" prefWidth="297.0">
+                     <children>
+                        <TextField fx:id="phone" layoutX="126.0" layoutY="2.0" />
+                        <Label layoutX="56.0" layoutY="8.0" text="Phone" />
+                     </children>
+                  </Pane>
+                  <Pane layoutX="55.0" layoutY="306.0" prefHeight="31.0" prefWidth="297.0">
+                     <children>
+                        <TextField fx:id="messMenu" layoutX="126.0" layoutY="2.0" />
+                        <Label layoutX="56.0" layoutY="8.0" text="Menu" />
+                     </children>
+                  </Pane>
+                  <Button layoutX="172.0" layoutY="350.0" mnemonicParsing="false" onAction="#addMessDetails" style="-fx-background-color: #0d80ad;" text="Add mess" textFill="WHITE" />
+                  <Pane layoutX="20.0" layoutY="387.0" prefHeight="159.0" prefWidth="367.0">
+                     <children>
+                        <Text layoutX="138.0" layoutY="22.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Remove mess" />
+                        <Pane layoutX="44.0" layoutY="34.0" prefHeight="31.0" prefWidth="279.0">
+                           <children>
+                              <TextField fx:id="messNameRemove" layoutX="93.0" layoutY="2.0" />
+                              <Label layoutX="8.0" layoutY="8.0" text="Mess name" />
+                           </children>
+                        </Pane>
+                        <Button layoutX="129.0" layoutY="78.0" mnemonicParsing="false" onAction="#removeMess" style="-fx-background-color: #ff4300;" text="Remove mess" textFill="WHITE" />
+                        <Label fx:id="messStatus" alignment="CENTER" layoutY="113.0" prefHeight="25.0" prefWidth="367.0" />
+                     </children>
+                  </Pane>
+               </children>
+            </Pane>
+            <Pane fx:id="student" layoutX="-2.0" layoutY="-2.0" prefHeight="756.0" prefWidth="935.0" style="visibility: false;">
+               <children>
+                  <ListView fx:id="studentList" layoutX="2.0" layoutY="2.0" prefHeight="756.0" prefWidth="937.0" />
+               </children>
+            </Pane>
+            <Pane fx:id="mess" prefHeight="756.0" prefWidth="935.0" style="visibility: false;">
+               <children>
+                  <ListView fx:id="messList" prefHeight="756.0" prefWidth="937.0" />
+               </children>
+            </Pane>
+            <Pane fx:id="addStudent" layoutX="257.0" layoutY="96.0" prefHeight="564.0" prefWidth="418.0" style="visibility: true;">
+               <children>
+                  <Text layoutX="140.0" layoutY="26.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Enter the details" wrappingWidth="125.7294921875" />
+                  <Pane layoutX="62.0" layoutY="40.0" prefHeight="31.0" prefWidth="297.0">
+                     <children>
+                        <TextField fx:id="name" layoutX="126.0" layoutY="2.0" />
+                        <Label layoutX="56.0" layoutY="8.0" text="Name" />
+                     </children>
+                  </Pane>
+                  <Pane layoutX="62.0" layoutY="86.0" prefHeight="31.0" prefWidth="297.0">
+                     <children>
+                        <TextField fx:id="roll" layoutX="126.0" layoutY="2.0" />
+                        <Label layoutX="56.0" layoutY="8.0" text="Roll" />
+                     </children>
+                  </Pane>
+                  <Pane layoutX="62.0" layoutY="134.0" prefHeight="31.0" prefWidth="297.0">
+                     <children>
+                        <TextField fx:id="dob" layoutX="126.0" layoutY="2.0" />
+                        <Label layoutX="55.0" layoutY="10.0" text="Dob" />
+                     </children>
+                  </Pane>
+                  <Pane layoutX="71.0" layoutY="263.0" prefHeight="140.0" prefWidth="279.0">
+                     <children>
+                        <Label layoutX="116.0" layoutY="14.0" text="Gender" />
+                        <Pane layoutX="40.0" layoutY="39.0" prefHeight="72.0" prefWidth="200.0">
+                           <children>
+                              <RadioButton fx:id="male" layoutX="73.0" layoutY="4.0" mnemonicParsing="false" text="Male">
+                                 <toggleGroup>
+                                    <ToggleGroup fx:id="tg" />
+                                 </toggleGroup></RadioButton>
+                              <RadioButton fx:id="female" layoutX="66.0" layoutY="30.0" mnemonicParsing="false" text="female" toggleGroup="$tg" />
+                           </children>
+                        </Pane>
+                        <Button layoutX="73.0" layoutY="108.0" mnemonicParsing="false" onAction="#clickSubmit" prefHeight="25.0" prefWidth="134.0" style="-fx-background-color: #0d80ad;" text="submit" textFill="WHITE" />
+                     </children>
+                  </Pane>
+                  <Pane layoutX="62.0" layoutY="177.0" prefHeight="31.0" prefWidth="297.0">
+                     <children>
+                        <TextField fx:id="email" layoutX="126.0" layoutY="2.0" />
+                        <Label layoutX="54.0" layoutY="10.0" text="Email" />
+                     </children>
+                  </Pane>
+                  <Pane layoutX="16.0" layoutY="401.0" prefHeight="118.0" prefWidth="388.0">
+                     <children>
+                        <Text layoutX="135.0" layoutY="27.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Remove student" />
+                        <Pane layoutX="70.0" layoutY="37.0" prefHeight="31.0" prefWidth="237.0">
+                           <children>
+                              <TextField fx:id="rollToRemove" layoutX="61.0" layoutY="2.0" />
+                              <Label layoutX="7.0" layoutY="8.0" text="Roll" />
+                           </children>
+                        </Pane>
+                        <Button fx:id="removeButton" layoutX="129.0" layoutY="79.0" mnemonicParsing="false" onAction="#onRemove" style="-fx-background-color: #ff4300;" text=" Remove student" textFill="WHITE" />
+                     </children>
+                  </Pane>
+                  <Label fx:id="studentStatus" alignment="CENTER" contentDisplay="CENTER" layoutX="3.0" layoutY="521.0" prefHeight="25.0" prefWidth="418.0" />
+                  <Pane layoutX="62.0" layoutY="224.0" prefHeight="31.0" prefWidth="297.0">
+                     <children>
+                        <TextField fx:id="prefMess" layoutX="126.0" layoutY="2.0" />
+                        <Label layoutX="54.0" layoutY="10.0" text="Mess" />
+                     </children>
+                  </Pane>
+               </children>
+            </Pane>
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>
